@@ -1,0 +1,84 @@
+Source: usbredir
+Section: libs
+Priority: optional
+Maintainer: Lin Qigang <lqi254@protonmail.com>
+Build-Depends: debhelper-compat (= 13),
+               libusb-1.0-0-dev,
+               pkg-config,
+               meson,
+               libglib2.0-dev
+Standards-Version: 4.5.1
+Homepage: http://www.spice-space.org/
+Vcs-Git: https://salsa.debian.org/debian/usbredir.git
+Vcs-Browser: https://salsa.debian.org/debian/usbredir
+Rules-Requires-Root: no
+
+Package: libusbredirhost1
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Implementing the usb-host (*) side of a usbredir connection (runtime)
+ Usbredirhost is a library implementing the usb-host (*) side of a
+ usbredir connection. All that an application wishing to implement
+ an usb-host needs to do is:
+  * Provide a libusb device handle for the device
+  * Provide write and read callbacks for the actual transport of usbredir data
+  * Monitor for usbredir and libusb read/write events and call their handlers
+ .
+ This package contains the runtime library.
+
+Package: libusbredirhost-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: libusbredirhost1 (= ${binary:Version}),
+         libusbredirparser-dev (= ${binary:Version}),
+         ${misc:Depends}
+Description: implementing the usb-host (*) side of a usbredir connection (development)
+ Usbredirhost is a library implementing the usb-host (*) side of a
+ usbredir connection. All that an application wishing to implement
+ an usb-host needs to do is:
+  * Provide a libusb device handle for the device
+  * Provide write and read callbacks for the actual transport of usbredir data
+  * Monitor for usbredir and libusb read/write events and call their handlers
+ .
+ This package contains the development header files.
+
+Package: libusbredirparser1
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Parser for the usbredir protocol (runtime)
+ Usbredirparse is a library containing the parser for the usbredir protocol.
+ This package contains the runtime library.
+
+Package: libusbredirparser-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: libusbredirparser1 (= ${binary:Version}), ${misc:Depends}
+Description: Parser for the usbredir protocol (development)
+ Usbredirparse is a library containing the parser for the usbredir protocol.
+ This package contains the development header files.
+
+Package: usbredirserver
+Section: otherosfs
+Architecture: any
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Simple USB host TCP server
+ usbredirserver is a small standalone server for exporting an USB device for
+ use from another (virtual) machine through the usbredir protocol.
+ .
+ Deprecated and replaced by usbredirect.
+
+Package: usbredirect
+Section: otherosfs
+Architecture: any
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Simple USB host TCP client
+ usbredirect is an usbredir client for exporting an USB device either as TCP
+ client or server, for use from another (virtual) machine through the usbredir
+ protocol.

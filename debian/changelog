@@ -1,0 +1,97 @@
+usbredir (0.11.0-2) unstable; urgency=medium
+
+  * Source only upload for migration to testing
+
+ -- Lin Qigang <lqi254@protonmail.com>  Tue, 31 Aug 2021 21:44:05 +0700
+
+usbredir (0.11.0-1) unstable; urgency=medium
+
+  * New upstream version 0.11.0
+  * Adopt package (Closes: #911431)
+  * Updated docs from text to markdown
+  * Added usbredirect package, which deprecates usbredirserver
+  * debian/control:
+      - Added Rules-Requires-Root flag
+      - Increased standards version
+      - Removed debhelper-compat file
+      - Removed explicit dh-autoconf dependency
+      - Removed cmake build dependency
+  * debian/compat: Increased debhelper compat from 9 to 13
+  * debian/copyright:
+      - Added new maintainer
+      - Changed format link to https
+      - Updated source link to new freedesktop page
+  * debian/libusbredirhost1.symbols: Updated symbols to new Meson mapping
+  * debian/libusbredirparser1.symbols: Updated symbols to new Meson mapping
+  * debian/upstream/metadata: Added upstream metadata
+  * debian/upstream/signing-key.asc: Added upstream signing key
+  * debian/usbredirect.install: Added usbredirect install file
+  * debian/watch: Use tagged git releases and check gittag in pgp mode
+
+ -- Lin Qigang <lqi254@protonmail.com>  Tue, 24 Aug 2021 20:04:51 +0700
+
+usbredir (0.8.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 0.8.0
+  * debian/control: Update the Vcs-* fields
+  * debian/control: Bump Standards-Version to 4.2.1 (no further changes)
+  * debian/control: Build on all architectures (Closes: #851683)
+  * debian/watch: Use https to please lintian
+  * debian/*.symbols: Add Build-Depends-Package field
+  * debian/control: Make libusbredirhost-dev dependency against
+    libusbredirparser-dev more strict
+
+ -- Laurent Bigonville <bigon@debian.org>  Sat, 20 Oct 2018 11:20:06 +0200
+
+usbredir (0.7.1-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #813026)
+  * Call dh with autoreconf in debian/rules (Closes: #734013)
+  * Update debian/*.symbols
+  * Bump Standards-Version to 3.9.7 (no changes)
+  * Switch to secure uri in debian/control
+  * Add DEB_BUILD_MAINT_OPTIONS in debian/rules
+
+ -- Liang Guo <guoliang@debian.org>  Mon, 22 Feb 2016 22:31:17 +0800
+
+usbredir (0.7-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump Standards-Version to 3.9.5 (no changes)
+  * Remove update-usbredirserver-whatis-entry.diff, Applied Upstream
+  * Remove Pre-Depends on ${misc:Pre-Depends}
+  * Build usbredir on linux-any
+  * Use canonical vcs field
+
+ -- Liang Guo <guoliang@debian.org>  Tue, 24 Jun 2014 18:17:53 +0800
+
+usbredir (0.6-2) unstable; urgency=low
+
+  * Upload to unstable
+
+ -- Liang Guo <guoliang@debian.org>  Thu, 09 May 2013 22:18:36 +0800
+
+usbredir (0.6-1) experimental; urgency=low
+
+  * New upstream release (Closes: #691405)
+  * Rename libusbredirparser0 to libusbredirparser1
+  * Remove ChangeLog from libusbredirhost1.docs, included in all package
+  * Rename libusbredirparser.pc to libusbredirparser-0.5.pc in
+    libusbredirparser-dev.install
+
+ -- Liang Guo <guoliang@debian.org>  Sun, 30 Dec 2012 15:03:35 +0800
+
+usbredir (0.4.3-2) unstable; urgency=low
+
+  * debian/control:
+    - Update my E-mail address
+    - Fix dependency problem
+
+ -- Liang Guo <guoliang@debian.org>  Fri, 25 May 2012 21:54:08 +0800
+
+usbredir (0.4.3-1) unstable; urgency=low
+
+  * Initial release (Closes: #665379)
+
+ -- Liang Guo <bluestonechina@gmail.com>  Thu, 05 Apr 2012 10:23:27 +0800

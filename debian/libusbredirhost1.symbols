@@ -1,0 +1,14 @@
+libusbredirhost.so.1 libusbredirhost1 #MINVER#
+* Build-Depends-Package: libusbredirhost-dev
+ USBREDIRHOST_0.8.0@USBREDIRHOST_0.8.0 0.8.0
+ usbredirhost_check_device_filter@USBREDIRHOST_0.8.0 0.8.0
+ usbredirhost_close@USBREDIRHOST_0.8.0 0.8.0
+ usbredirhost_free_write_buffer@USBREDIRHOST_0.8.0 0.8.0
+ usbredirhost_get_guest_filter@USBREDIRHOST_0.8.0 0.8.0
+ usbredirhost_has_data_to_write@USBREDIRHOST_0.8.0 0.8.0
+ usbredirhost_open@USBREDIRHOST_0.8.0 0.8.0
+ usbredirhost_open_full@USBREDIRHOST_0.8.0 0.8.0
+ usbredirhost_read_guest_data@USBREDIRHOST_0.8.0 0.8.0
+ usbredirhost_set_buffered_output_size_cb@USBREDIRHOST_0.8.0 0.8.0
+ usbredirhost_set_device@USBREDIRHOST_0.8.0 0.8.0
+ usbredirhost_write_guest_data@USBREDIRHOST_0.8.0 0.8.0

@@ -1,0 +1,3 @@
+usr/include/usbredirhost.h
+usr/lib/*/libusbredirhost.so
+usr/lib/*/pkgconfig/libusbredirhost.pc
